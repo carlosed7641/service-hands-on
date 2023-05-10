@@ -1,6 +1,6 @@
 {
   "memory": 256,
-  "ttl": 10,
+  "ttl": 60,
   "timeout": 2,
   "minReplicas": 2,
   "maxReplicas": 4,
@@ -8,6 +8,14 @@
   "routes": {
     "status": {
       "path": "/_v/status/:code",
+      "public": true
+    },
+    "products": {
+      "path": "/_v/products",
+      "public": true
+    },
+    "product": {
+      "path": "/_v/product/:id",
       "public": true
     }
   }
